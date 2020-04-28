@@ -1,120 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+     addEventListener('fetch', (event) => {
+      return event.respondWith(handleRequest(event.request));
+    })
+
+    const handleRequest = async (request) => {
+      const render = (body) => {
+        return new Response(`
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Menlo; color: #900112; -webkit-text-stroke: #900112}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Menlo; color: #900112; -webkit-text-stroke: #900112; min-height: 14.0px}
-    span.s1 {font-kerning: none; background-color: #fffffe}
-    span.s2 {font-kerning: none; color: #900112; background-color: #fffffe; -webkit-text-stroke: 0px #900112}
-    span.s3 {font-kerning: none; color: #0000ff; background-color: #fffffe; -webkit-text-stroke: 0px #0000ff}
-    span.s4 {font-kerning: none}
-    span.s5 {font-kerning: none; color: #0e6e6d; background-color: #fffffe; -webkit-text-stroke: 0px #0e6e6d}
-    span.s6 {font: 12.0px 'PingFang SC'; font-kerning: none; background-color: #fffffe}
-    span.s7 {font-kerning: none; color: #137848; background-color: #fffffe; -webkit-text-stroke: 0px #137848}
-    span.s8 {font-kerning: none; color: #000000; background-color: #fffffe; -webkit-text-stroke: 0px #000000}
-    span.s9 {font-kerning: none; color: #6b0001; background-color: #fffffe; -webkit-text-stroke: 0px #6b0001}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>addEventListener(</span><span class="s2">'fetch'</span><span class="s1">, (event) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">return</span><span class="s1"> event.respondWith(handleRequest(event.request));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>})</span></p>
-<p class="p2"><span class="s4"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">const</span><span class="s1"> handleRequest = </span><span class="s3">async</span><span class="s1"> (request) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">const</span><span class="s1"> render = (body) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">return</span><span class="s1"> </span><span class="s3">new</span><span class="s1"> </span><span class="s5">Response</span><span class="s1">(</span><span class="s2">`</span></p>
-<p class="p3"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p3"><span class="s1">&lt;html&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>&lt;head&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;T.CN </span><span class="s6">短网址</span><span class="s1">&lt;/title&gt;</span></p>
-<p class="p2"><span class="s4"></span><br></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style media="screen"&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#message h2 {<span class="Apple-converted-space">  </span>color: rgba(0,0,0,0.6); font-weight: bold; font-size: 14px; margin: 0 0 8px; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#message h1 { color: #ffa100;<span class="Apple-converted-space">  </span>font-size: 30px; font-weight: 300;<span class="Apple-converted-space">  </span>margin: 0 0 16px;}</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#message a { display: block; text-align: center; background: #039be5; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>#load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>@media (max-width: 600px) {</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>body, #message { margin-top: 0; background: white; box-shadow: none; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>body { border-top: 16px solid #ffa100; }</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">${body}</span></p>
-<p class="p2"><span class="s4"></span><br></p>
-<p class="p3"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s2">&lt;/html&gt;`</span><span class="s1">.trim(), {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>status: </span><span class="s7">200</span><span class="s1">,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>headers: {</span></p>
-<p class="p3"><span class="s8"><span class="Apple-converted-space">            </span></span><span class="s1">'Content-Type'</span><span class="s8">: </span><span class="s1">'text/html; charset=utf-8'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>request = </span><span class="s3">new</span><span class="s1"> </span><span class="s5">URL</span><span class="s1">(request.url);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">if</span><span class="s1"> (request.pathname !== </span><span class="s2">'/'</span><span class="s1">) </span><span class="s3">return</span><span class="s1"> </span><span class="s3">new</span><span class="s1"> </span><span class="s5">Response</span><span class="s1">(</span><span class="s3">null</span><span class="s1">, { status: </span><span class="s7">404</span><span class="s1"> });</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">if</span><span class="s1"> (request.searchParams.has(</span><span class="s2">'url'</span><span class="s1">)) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">const</span><span class="s1"> url = request.searchParams.</span><span class="s3">get</span><span class="s1">(</span><span class="s2">'url'</span><span class="s1">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">const</span><span class="s1"> response = </span><span class="s3">await</span><span class="s1"> fetch(</span><span class="s2">`http://service.weibo.com/share/share.php?url=</span><span class="s1">${encodeURIComponent(url)}</span><span class="s2">&amp;title=1`</span><span class="s1">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">const</span><span class="s1"> html = </span><span class="s3">await</span><span class="s1"> response.text();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">const</span><span class="s1"> short = html.match(</span><span class="s9">/http:\/\/t.cn\/\w+/</span><span class="s3">i</span><span class="s1">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">const</span><span class="s1"> refer = html.match(</span><span class="s9">/\$refer\s+: "(.+?)"/</span><span class="s3">i</span><span class="s1">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">if</span><span class="s1"> (short &amp;&amp; refer) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s3">return</span><span class="s1"> render(</span><span class="s2">`</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div id="message" align="center"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">         </span></span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>&lt;center&gt;&lt;h1&gt;</span><span class="s6">缩短结果：</span><span class="s1">&lt;/h1&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a id="copy" onClick="copyUrl2()"&gt;</span><span class="s8">${short[</span><span class="s7">0</span><span class="s8">]}</span><span class="s1">&lt;/a&gt;</span></p>
-<p class="p2"><span class="s4"></span><br></p>
-<p class="p3"><span class="s1">&lt;script&gt;</span></p>
-<p class="p2"><span class="s4"></span><br></p>
-<p class="p3"><span class="s1">function copyUrl2(){</span></p>
-<p class="p2"><span class="s4"></span><br></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>var Url2=document.getElementById("copy").innerText;</span></p>
-<p class="p3"><span class="s1">var oInput = document.createElement('input');</span></p>
-<p class="p3"><span class="s1">oInput.value = Url2;</span></p>
-<p class="p3"><span class="s1">document.body.appendChild(oInput);</span></p>
-<p class="p3"><span class="s1">oInput.select(); // </span><span class="s6">选择对象</span></p>
-<p class="p3"><span class="s1">document.execCommand("Copy"); // </span><span class="s6">执行浏览器复制命令</span></p>
-<p class="p3"><span class="s1">oInput.className = 'oInput';</span></p>
-<p class="p3"><span class="s1">oInput.style.display='none';</span></p>
-<p class="p3"><span class="s1">alert('</span><span class="s6">复制成功</span><span class="s1">');</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p3"><span class="s1">&lt;/script&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>&lt;center&gt;&lt;h1&gt;</span><span class="s6">原始网址：</span><span class="s1">&lt;/h1&gt;&lt;a href="</span><span class="s8">${refer[</span><span class="s7">1</span><span class="s8">]}</span><span class="s1">"&gt;</span><span class="s8">${refer[</span><span class="s7">1</span><span class="s8">]}</span><span class="s1">&lt;/a&gt;&lt;/center&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="/"&gt;</span><span class="s6">返回</span><span class="s1">&lt;/a&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">          </span>`</span><span class="s8">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">return</span><span class="s1"> render(</span><span class="s2">`</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="message" align="center"&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;center&gt;&lt;h1&gt;</span><span class="s6">请求失败</span><span class="s1">&lt;/h1&gt;&lt;/center&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>`</span><span class="s8">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">return</span><span class="s1"> render(</span><span class="s2">`</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div id="message" align="center"&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>&lt;center&gt;&lt;h1&gt;T.CN </span><span class="s6">短网址</span><span class="s1">&lt;/h1&gt;&lt;/center&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">   </span>&lt;p&gt;&lt;/p&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;form method="GET"&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input name="url"<span class="Apple-converted-space">  </span>placeholder="http(s)://XXX.XXX"/&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;br&gt;&lt;br&gt;&lt;button type="submit"&gt;</span><span class="s6">一键压缩</span><span class="s1">&lt;/button&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span>`</span><span class="s8">);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>T.CN 短网址</title>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 {  color: rgba(0,0,0,0.6); font-weight: bold; font-size: 14px; margin: 0 0 8px; }
+      #message h1 { color: #ffa100;  font-size: 30px; font-weight: 300;  margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+${body}
+
 </body>
-</html>
+</html>`.trim(), {
+          status: 200,
+          headers: {
+            'Content-Type': 'text/html; charset=utf-8'
+          }
+        });
+      }
+      request = new URL(request.url);
+      if (request.pathname !== '/') return new Response(null, { status: 404 });
+      if (request.searchParams.has('url')) {
+        const url = request.searchParams.get('url');
+        const response = await fetch(`http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=1`);
+        const html = await response.text();
+        const short = html.match(/http:\/\/t.cn\/\w+/i);
+        const refer = html.match(/\$refer\s+: "(.+?)"/i);
+        if (short && refer) {
+          return render(`
+          <div id="message" align="center">
+         
+            <center><h1>缩短结果：</h1>
+            <a id="copy" onClick="copyUrl2()">${short[0]}</a>
+
+<script>
+
+function copyUrl2(){
+
+    var Url2=document.getElementById("copy").innerText;
+var oInput = document.createElement('input');
+oInput.value = Url2;
+document.body.appendChild(oInput);
+oInput.select(); // 选择对象
+document.execCommand("Copy"); // 执行浏览器复制命令
+oInput.className = 'oInput';
+oInput.style.display='none';
+alert('复制成功');
+    }
+</script>
+            <center><h1>原始网址：</h1><a href="${refer[1]}">${refer[1]}</a></center>
+            <p></p>
+            <a href="/">返回</a>
+            </div>
+          `);
+        }
+        return render(`
+        <div id="message" align="center">
+        <center><h1>请求失败</h1></center>
+        </div>
+        `);
+      }
+      return render(`
+      <div id="message" align="center">
+      <center><h1>T.CN 短网址</h1></center>
+   <p></p>
+        <form method="GET">
+        <input name="url"  placeholder="http(s)://XXX.XXX"/>
+        <br><br><button type="submit">一键压缩</button>
+        </form>
+        </div>
+      `);
+    }
