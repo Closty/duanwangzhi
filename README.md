@@ -6,20 +6,19 @@
 [![](https://img.shields.io/badge/by-%E7%93%B6%E5%AD%90-green?link=https://www.clost.net)](https://www.clost.net/default/513.html)
 [![HitCount](http://hits.dwyl.com/closty/duanwangzhi.svg)](http://hits.dwyl.com/closty/duanwangzhi)
 
-首先什么叫短网址呢？他有什么用处呢？短网址是指将任何域名更换成一个t.cn/xxxx类的网址。
-比如将网址[https://www.clost.net](https://www.clost.net "www.clost.net")转化成[http://t.cn/A6wT0J1d](http://t.cn/A6wT0J1d "http://t.cn/A6wT0J1d")
+首先什么叫短网址呢？他有什么用处呢？短网址是指将任何域名更换成一个`t.cn/xxxx`类的网址。
+比如将网址[https://www.clost.net](https://www.clost.net "www.clost.net")转化成[https://t.cn/A6wT0J1d](https://t.cn/A6wT0J1d "https://t.cn/A6wT0J1d")
 
    <details>
    <summary> 那么为什么要转换呢？</summary>
-   简洁的说可以防红，比如你在你的qq分享你的网站，分享过多很可能会被显示已被拦截等字样，别人以后就只能复制到你的网                   
-   址在浏览器打开而不能直接在qq内点开。用短网址就可以很好的防止这一点发生。
+   一方面，直观来说可以将网址变短，比如分享微信的链接，一大串字符会限制你文章字数；另一方面，可以防红，比如你在你的qq分享你的网站，分享过多会导致腾讯    检测并封除域名便会被显示已被拦截等字样，别人以后就只能复制到你的网址在浏览器打开而不能直接在qq内点开。用短网址就可以很好的防止这一点发生。
    其实市面上有很多网址缩短源码，但都不够简洁，且需要服务器支撑。如果你喜欢极简风格那就来对了！   
    
    </details>
 
 ### 特点：
 1. 极简风格
-1. 将网址转换为t.cn/xxx类格式
+1. 将网址转换为`https://t.cn/xxx`类格式
 1. 基于cloudflare的强大功能，无需服务器支撑即可建立短网址网页
 
 ## 教程：
