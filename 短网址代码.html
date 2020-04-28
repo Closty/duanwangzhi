@@ -46,15 +46,15 @@ ${body}
         const url = request.searchParams.get('url');
         const response = await fetch(`http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=1`);
         const html = await response.text();
-        const short = html.match(/http:\/\/t.cn\/\w+/i);
+        const short1 = html.match(/\/\/t.cn\/\w+/i);
+        short = 'https:' + short1;
         const refer = html.match(/\$refer\s+: "(.+?)"/i);
         if (short && refer) {
           return render(`
           <div id="message" align="center">
          
             <center><h1>缩短结果：</h1>
-            <a id="copy" onClick="copyUrl2()">${short[0]}</a>
-
+            <a id="copy" onClick="copyUrl2()">${short}</a>
 <script>
 
 function copyUrl2(){
