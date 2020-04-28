@@ -24,14 +24,14 @@
 
 ## 教程：
 ### 前期准备
-1. 一个[cloudflare](http://cloudflare.com "cloudflare")账号
-1. 拥有自己的域名，[免费申请>>](http://freenom.com "免费申请>>")；
+1. 一个[cloudflare](http://cloudflare.com)账号
+1. 拥有自己的域名，[freenom免费申请>>](http://freenom.com "免费申请>>")；
 
 ### 正式部署
 #### 一、创建cf（cloudflare）的workers
 <details>
 <summary> 如何创建cloudflare-workers？</summary>
-1.进入[cloudflare](http://cloudflare.com "cloudflare")首页,点击进入workers
+1.进入cloudflare首页 http://cloudflare.com ,点击进入workers
    
 ![6010332F-D475-4589-9B0A-19975E67C6EB.png](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/853632551.png)<br>
 2.点击创建worker
@@ -43,14 +43,13 @@
 #### 二、编辑worker
 <details>
 <summary> 如何编辑cloudflare-workers？</summary>
-在脚本框内填入本项目中[以html结尾的代码](https://github.com/Closty/duanwangzhi/blob/master/短网址代码.html) ；打开后将其中的所有代码复制并粘贴填入cf-worker的编辑框中。
+在脚本框内填入本项目中以html结尾的代码 https://github.com/Closty/duanwangzhi/blob/master/短网址代码.html ；打开后将其中的所有代码复制并粘贴填入cf-worker的编辑框中。
   
 如图所示
 
 ![填入代码](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/2327643990.png)<br>
 
-这时候便可以访问你的worker，只不过域名不是自定义的。不过也可以使用了。地址便是上图代码上侧的地址，如这是我的worker地址。
-[https://s.clost.workers.dev](https://s.clost.workers.dev "https://s.clost.workers.dev")<br>
+这时候便可以访问你的worker，只不过域名不是自定义的。不过也可以使用了。地址便是上图代码上侧的地址，如这是我的worker地址。[https://s.clost.workers.dev](https://s.clost.workers.dev "https://s.clost.workers.dev")<br>
 </details>
 
 
