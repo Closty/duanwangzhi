@@ -28,9 +28,11 @@
     </style>
   </head>
   <body>
-${body}
-
 </body>
+${body}
+<center><footer>
+  <p><a href="https://github.com/Closty/duanwangzhi"><img src="https://cdn.jsdelivr.net/gh/Closty/duanwangzhi/github.png" style="width:50px;"> </a></p>
+</footer><center>
 </html>`.trim(), {
           status: 200,
           headers: {
@@ -77,6 +79,7 @@ alert('复制成功');
         return render(`
         <div id="message" align="center">
         <center><h1>请求失败</h1></center>
+        <a href="/">返回</a>
         </div>
         `);
       }
