@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>T.CN 短网址</title>
+    <title>短网址</title>
 
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
@@ -44,11 +44,14 @@ ${body}
       if (request.pathname !== '/') return new Response(null, { status: 404 });
       if (request.searchParams.has('url')) {
         const url = request.searchParams.get('url');
-        const response = await fetch(`http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=1`);
+        const response = await fetch(`http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=1`);//api接口2
         const html = await response.text();
         const short1 = html.match(/\/\/t.cn\/\w+/i);
-        short = 'https:' + short1;
+        short = 'https:' + short1;//将http更改为https格式
         const refer = html.match(/\$refer\s+: "(.+?)"/i);
+        const response2 = await fetch(`http://t.im/?url=${encodeURIComponent(url)}`);//api接口1
+        const html2 = await response2.text();
+        const short2 = html2.match(/https:\/\/t.im\/\w+/i);
         if (short && refer) {
           return render(`
           <div id="message" align="center">
@@ -63,8 +66,24 @@ function copyUrl2(){
 var oInput = document.createElement('input');
 oInput.value = Url2;
 document.body.appendChild(oInput);
-oInput.select(); // 选择对象
-document.execCommand("Copy"); // 执行浏览器复制命令
+oInput.select(); 
+document.execCommand("Copy"); 
+oInput.className = 'oInput';
+oInput.style.display='none';
+alert('复制成功');
+    }
+</script><br>
+           <a id="copy2" onClick="copyUrl1()">${short2}</a>
+<script>
+
+function copyUrl1(){
+
+    var Url1=document.getElementById("copy2").innerText;
+var oInput = document.createElement('input');
+oInput.value = Url1;
+document.body.appendChild(oInput);
+oInput.select(); 
+document.execCommand("Copy"); 
 oInput.className = 'oInput';
 oInput.style.display='none';
 alert('复制成功');
