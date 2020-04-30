@@ -11,7 +11,7 @@
 
    <details>
    <summary> 那么为什么要转换呢？</summary>
-   一方面，直观来说可以将网址变短，比如分享微信的链接，一大串字符会限制你文章字数；另一方面，可以防红，比如你在你的qq分享你的网站，分享过多会导致腾讯    检测并封除域名便会被显示已被拦截等字样，别人以后就只能复制到你的网址在浏览器打开而不能直接在qq内点开。用短网址就可以很好的防止这一点发生。当然这样的操作是要付费的，需要修改源码api接口，请自行 百度https://t.cn/A6AGG52u
+   一方面，直观来说可以将网址变短，比如分享微信的链接，一大串字符会限制你文章字数；另一方面，可以防红，比如你在你的qq分享你的网站，分享过多会导致腾讯    检测并封除域名便会被显示已被拦截等字样，别人以后就只能复制到你的网址在浏览器打开而不能直接在qq内点开。用短网址就可以很好的防止这一点发生。当然这样的操作是要付费的，需要修改源码api接口，请<a href="https://t.cn/A6AGG52u">自行百度</a>。
    其实市面上有很多网址缩短源码，但都不够简洁，且需要服务器支撑。如果你喜欢极简风格那就来对了！   
    
    </details>
@@ -30,7 +30,7 @@
 #### 一、创建cf（cloudflare）的workers
 <details>
 <summary> 如何创建cloudflare-workers？</summary>
-1.进入cloudflare首页 http://cloudflare.com ,点击进入workers
+1.进入 <a href=http://cloudflare.com>cloudflare首页<a> ,点击进入workers
    
 ![6010332F-D475-4589-9B0A-19975E67C6EB.png](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/853632551.png)<br>
 2.点击创建worker
@@ -42,7 +42,7 @@
 #### 二、编辑worker
 <details>
 <summary> 如何编辑cloudflare-workers？</summary>
-在脚本框内填入本项目中以html结尾的代码 https://github.com/Closty/duanwangzhi/blob/master/短网址代码.html ；打开后将其中的所有代码复制并粘贴填入cf-worker的编辑框中。
+在脚本框内填入<a href=https://github.com/Closty/duanwangzhi/blob/master/短网址代码.html>本项目中以html结尾的代码<a> ；打开后将其中的所有代码复制并粘贴填入cf-worker的编辑框中。
   
 如图所示
 
@@ -72,4 +72,7 @@
 如访问[https://s.clost.net](https://s.clost.net "https://s.clost.net")
 
 ## 贡献：
-本项目开源，如果有更精美的或其他风格的界面代码，欢迎来pull，并且会在此处与顶部显示您的GitHub用户名。
+
+[Closty](https://github.com/closty)
+
+以及带添加的人们
