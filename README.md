@@ -1,9 +1,8 @@
 ## 介绍：
 [![](https://img.shields.io/badge/短网址-极简风格-orange?link=https://s.clost.net)](https://github.com/Closty/duanwangzhi)
 [![](https://img.shields.io/badge/by-%E7%93%B6%E5%AD%90-green?link=https://www.clost.net)](https://www.clost.net/default/513.html)
-[![HitCount](http://hits.dwyl.com/closty/duanwangzhi.svg)](http://hits.dwyl.com/closty/duanwangzhi)
 
-![20200430_234331_0000.png](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/05/3118081449.png)
+![20200430_234331_0000副本.png](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/05/2401556746.png)
 
 首先什么叫短网址呢？他有什么用处呢？短网址是指将任何域名更换成一个`t.cn/xxxx`类的网址。
 比如将网址[https://www.clost.net](https://www.clost.net "www.clost.net")转化成[https://t.cn/A6wT0J1d](https://t.cn/A6wT0J1d "https://t.cn/A6wT0J1d")
