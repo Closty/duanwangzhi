@@ -4,11 +4,11 @@
 
 ![20200430_234331_0000副本.png](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/05/2401556746.png)
 
-首先什么叫短网址呢？他有什么用处呢？短网址是指将任何域名更换成一个`t.cn/xxxx`类的网址。
+短网址是指将任何域名更换成一个`t.cn/xxxx`类的网址。<br>
 比如将网址[https://www.clost.net](https://www.clost.net "www.clost.net")转化成[https://t.cn/A6wT0J1d](https://t.cn/A6wT0J1d "https://t.cn/A6wT0J1d")
 
    <details>
-   <summary> 那么为什么要转换呢？</summary>
+   <summary> 为什么要转换？</summary>
    一方面，直观来说可以将网址变短，比如分享微信的链接，一大串字符会限制你文章字数；另一方面，可以防红，比如你在你的qq分享你的网站，分享过多会导致腾讯    检测并封除域名便会被显示已被拦截等字样，别人以后就只能复制到你的网址在浏览器打开而不能直接在qq内点开。用短网址就可以很好的防止这一点发生。当然这样的操作是要付费的，因为其本质已经起到cdn的作用了，同样简单的修改源码api接口即可使用，请<a href="https://t.cn/A6AGG52u">自行百度</a>。
    其实市面上有很多网址缩短源码，但都不够简洁，且需要服务器支撑。如果你喜欢极简风格那就来对了！   
    
