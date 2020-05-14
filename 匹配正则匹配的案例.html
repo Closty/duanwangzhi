@@ -1,0 +1,95 @@
+     addEventListener('fetch', (event) => {
+      return event.respondWith(handleRequest(event.request));
+    })
+
+    const handleRequest = async (request) => {
+      const render = (body) => {
+        return new Response(`
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>短网址</title>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 {  color: rgba(0,0,0,0.6); font-weight: bold; font-size: 14px; margin: 0 0 8px; }
+      #message h1 { color: #ffa100;  font-size: 30px; font-weight: 300;  margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+</body>
+${body}
+<center>
+  <p><a href="https://github.com/Closty/duanwangzhi"><img src="https://cdn.jsdelivr.net/gh/Closty/duanwangzhi/github.png" style="width:50px;"> </a></p>
+<center>
+</html>`.trim(), {
+          status: 200,
+          headers: {
+            'Content-Type': 'text/html; charset=utf-8'
+          }
+        });
+      }
+      request = new URL(request.url);
+      if (request.pathname !== '/') return new Response(null, { status: 404 });
+      if (request.searchParams.has('url')) {
+        const url = request.searchParams.get('url');
+        const response2 = await fetch(`https://api.uomg.com/api/long2dwz?dwzapi=tcn&url=${encodeURIComponent(url)}`);//api接口1
+        const html2 = await response2.text();
+        const short2 = 'https://t.cn' + html2.match(/\/\w+(?![\s\S]*?\/\w+)/);
+        if (short2 && url) {
+                    return render(`
+          <div id="message" align="center">
+         
+            <center><h1>缩短结果：</h1>
+           <a id="copy2" onClick="copyUrl1()">${short2}</a>
+<script>
+
+function copyUrl1(){
+
+    var Url1=document.getElementById("copy2").innerText;
+var oInput = document.createElement('input');
+oInput.value = Url1;
+document.body.appendChild(oInput);
+oInput.select(); 
+document.execCommand("Copy"); 
+oInput.className = 'oInput';
+oInput.style.display='none';
+alert('复制成功');
+    }
+</script>
+            <center><h1>原始网址：</h1>
+            <a href="${url}">${url}</a></center>
+            <p></p>
+            <a href="/">返回</a>
+            </div>
+          `);
+        }
+        return render(`
+        <div id="message" align="center">
+        <center><h1>请求失败</h1></center>
+        <a href="/">返回</a>
+        </div>
+        `);
+      }
+      return render(`
+      <div id="message" align="center">
+      <center><h1>短网址</h1></center>
+   <p></p>
+        <form method="GET">
+        <input name="url"  placeholder="http(s)://XXX.XXX"/>
+        <br><br><button type="submit">一键压缩</button>
+        </form>
+        </div>
+      `);
+    }
